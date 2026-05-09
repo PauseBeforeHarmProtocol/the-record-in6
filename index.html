@@ -292,7 +292,7 @@ body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-se
 
 <!-- PRIMARY BANNER -->
 <div class="primary-banner">
-  <span class="gold-accent">&#9733;</span> Primary Election: May 5, 2026 &mdash; <span id="countdown"></span> &mdash; Know Your Candidates Before You Vote <span class="gold-accent">&#9733;</span>
+  <span class="gold-accent">&#9733;</span> General Election: November 3, 2026 &mdash; <span id="countdown"></span> &mdash; Wirth (D) vs. Shreve (R) <span class="gold-accent">&#9733;</span>
   <span style="display:inline-block;margin-left:1rem;padding:.15rem .6rem;background:rgba(249,168,37,.2);border:1px solid rgba(249,168,37,.5);border-radius:4px;font-size:.55rem;">PBHP VERIFIED</span>
 </div>
 
@@ -315,7 +315,8 @@ body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-se
     <button class="navtab on" onclick="showPanel('home')">Home</button>
     <button class="navtab" onclick="showPanel('timeline')">Full Timeline</button>
     <button class="navtab" onclick="showPanel('topics')">By Topic</button>
-    <button class="navtab" onclick="showPanel('compare')">Compare Candidates</button>
+    <button class="navtab" onclick="showPanel('compare')">Wirth vs Shreve</button>
+    <button class="navtab" onclick="showPanel('primary-candidates')">Primary Candidates</button>
     <button class="navtab" onclick="showPanel('district')">IN-6 Data</button>
     <button class="navtab" onclick="showPanel('literacy')">Political Literacy</button>
     <button class="navtab" onclick="showPanel('methodology')">Methodology</button>
@@ -460,49 +461,28 @@ body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-se
 
   <!-- QUICK COMPARISON (kept) -->
   <div style="margin:1.5rem auto;max-width:720px;">
-    <h3 style="font-size:1.1rem;font-weight:900;color:var(--dem3);text-align:center;margin-bottom:.3rem;">Who&rsquo;s Running &mdash; At a Glance</h3>
-    <p style="font-size:.82rem;color:var(--dim);text-align:center;margin-bottom:1rem;">May 5 Primary. Know your options.</p>
+    <h3 style="font-size:1.1rem;font-weight:900;color:var(--dem3);text-align:center;margin-bottom:.3rem;">November 3, 2026 &mdash; Wirth vs. Shreve</h3>
+    <p style="font-size:.82rem;color:var(--dim);text-align:center;margin-bottom:1rem;">The May 5 primary is over. Two candidates advance. <a href="javascript:void(0);" onclick="showPanel('primary-candidates');" style="color:var(--dem);text-decoration:underline;">Other primary candidates &raquo;</a></p>
 
-    <!-- Republican Primary -->
+    <!-- Wirth vs Shreve General Election -->
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
       <div style="border:2px solid var(--gop);border-radius:12px;padding:1.1rem;background:linear-gradient(135deg,rgba(198,40,40,.03),transparent);">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:.55rem;text-transform:uppercase;letter-spacing:.12em;color:var(--gop);font-weight:800;margin-bottom:.2rem;">Republican</div>
-        <div style="font-weight:900;font-size:1rem;color:var(--gop3);">Jefferson Shreve</div>
-        <div style="font-size:.78rem;color:var(--dim);font-weight:600;margin-bottom:.5rem;">Incumbent</div>
-        <div style="font-size:.8rem;color:var(--txt2);line-height:1.5;">Net worth $600M. Self-funds 95%. Won 2024 primary with 28%. Zero public town halls. 4 gun positions in 10 years.</div>
+        <div style="font-family:'JetBrains Mono',monospace;font-size:.55rem;text-transform:uppercase;letter-spacing:.12em;color:var(--gop);font-weight:800;margin-bottom:.2rem;">Republican &middot; Incumbent</div>
+        <div style="font-weight:900;font-size:1.05rem;color:var(--gop3);">Jefferson Shreve</div>
+        <div style="font-size:.78rem;color:var(--dim);font-weight:600;margin-bottom:.5rem;">Won R primary 53&ndash;47</div>
+        <div style="font-size:.8rem;color:var(--txt2);line-height:1.5;">Net worth ~$600M. Self-funds 95%. House Appropriations Committee. Zero public town halls in 119th Congress. 4 gun positions in 10 years. Heritage Action lifetime: 0%.</div>
       </div>
-      <div style="border:2px solid var(--gold);border-radius:12px;padding:1.1rem;background:linear-gradient(135deg,rgba(249,168,37,.03),transparent);">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:.55rem;text-transform:uppercase;letter-spacing:.12em;color:var(--pbhp2);font-weight:800;margin-bottom:.2rem;">Republican</div>
-        <div style="font-weight:900;font-size:1rem;color:#E65100;">Sarah Janisse Brown</div>
-        <div style="font-size:.78rem;color:var(--dim);font-weight:600;margin-bottom:.5rem;">Challenger</div>
-        <div style="font-size:.8rem;color:var(--txt2);line-height:1.5;">Mother of 15. Grassroots-funded ($18K). School choice champion. &ldquo;Unwavering&rdquo; 2A. No PAC money.</div>
+      <div style="border:2px solid var(--purple);border-radius:12px;padding:1.1rem;background:linear-gradient(135deg,rgba(106,27,154,.03),transparent);">
+        <div style="font-family:'JetBrains Mono',monospace;font-size:.55rem;text-transform:uppercase;letter-spacing:.12em;color:var(--purple);font-weight:800;margin-bottom:.2rem;">Democrat &middot; Nominee</div>
+        <div style="font-weight:900;font-size:1.05rem;color:var(--purple);">Cinde Wirth</div>
+        <div style="font-size:.78rem;color:var(--dim);font-weight:600;margin-bottom:.5rem;">Won D primary &middot; 2024 nominee</div>
+        <div style="font-size:.8rem;color:var(--txt2);line-height:1.5;">7th-gen Bartholomew County. Ph.D. Education Policy. Albert Einstein Distinguished Educator Fellow. Wrote federal education law (2020). Medicare for All, fully fund public schools, end vouchers, reproductive rights, billionaire tax.</div>
       </div>
     </div>
 
-    <!-- Democratic Primary -->
-    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;">
-      <div style="border:2px solid var(--dem);border-radius:12px;padding:1rem;background:linear-gradient(135deg,rgba(21,101,192,.03),transparent);">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:.55rem;text-transform:uppercase;letter-spacing:.12em;color:var(--dem);font-weight:800;margin-bottom:.2rem;">Democrat</div>
-        <div style="font-weight:900;font-size:.95rem;color:var(--dem3);">Kory Amyx</div>
-        <div style="font-size:.76rem;color:var(--txt2);line-height:1.45;margin-top:.3rem;">23,000+ doors knocked. Medicare for All (phased). $20-25 min wage. Plans 3+ public town halls.</div>
-      </div>
-      <div style="border:2px solid var(--purple);border-radius:12px;padding:1rem;background:linear-gradient(135deg,rgba(106,27,154,.03),transparent);">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:.55rem;text-transform:uppercase;letter-spacing:.12em;color:var(--purple);font-weight:800;margin-bottom:.2rem;">Democrat</div>
-        <div style="font-weight:900;font-size:.95rem;color:var(--purple);">Cinde Wirth</div>
-        <div style="font-size:.76rem;color:var(--txt2);line-height:1.45;margin-top:.3rem;">Einstein Fellow. Wrote federal education law. 10+ years teaching. Medicare for All. Strongest progressive credentials.</div>
-      </div>
-      <div style="border:2px solid #3F51B5;border-radius:12px;padding:1rem;background:linear-gradient(135deg,rgba(63,81,181,.03),transparent);">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:.55rem;text-transform:uppercase;letter-spacing:.12em;color:#3F51B5;font-weight:800;margin-bottom:.2rem;">Democrat</div>
-        <div style="font-weight:900;font-size:.95rem;color:#283593;">Nick Baker</div>
-        <div style="font-size:.76rem;color:var(--txt2);line-height:1.45;margin-top:.3rem;">&ldquo;Small government Democrat.&rdquo; Attorney. Public option. Reform ICE, don&rsquo;t abolish. Balanced budget. Pragmatist.</div>
-      </div>
-      <div style="border:2px solid #009688;border-radius:12px;padding:1rem;background:linear-gradient(135deg,rgba(0,150,136,.03),transparent);">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:.55rem;text-transform:uppercase;letter-spacing:.12em;color:#009688;font-weight:800;margin-bottom:.2rem;">Democrat</div>
-        <div style="font-weight:900;font-size:.95rem;color:#00695C;">David Boyd</div>
-        <div style="font-size:.76rem;color:var(--txt2);line-height:1.45;margin-top:.3rem;">Former DHS officer. Navy veteran. Bipartisan focus. Affordable healthcare, housing, immigration reform.</div>
-      </div>
+    <div style="background:#fff8e1;border:1px solid #f9a825;border-radius:8px;padding:.7rem 1rem;font-size:.78rem;line-height:1.5;color:#5a4500;">
+      <strong>The race:</strong> Cook Political Report rates IN-6 R+16. Shreve won 2024 by ~36 points. The general election in this district is decided by turnout, money, and whether the incumbent has to defend his record in public &mdash; or whether he can run out the clock without a single town hall or debate.
     </div>
-  </div>
 
   <!-- CORRECTION POLICY / RIGHT OF RESPONSE -->
   <div style="margin:2rem auto;max-width:720px;border:1px solid var(--border);border-radius:10px;padding:1.2rem;">
@@ -517,7 +497,7 @@ body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-se
     <div style="padding:.8rem 1.2rem 1.2rem;">
       <p style="font-size:.82rem;color:var(--txt2);line-height:1.6;">Every entry uses three layers: <strong style="color:var(--dem);">THE FACTS</strong> (sourced from public records, FEC filings, news reporting), <strong style="color:var(--green);">SIGNIFICANCE</strong> (why it matters for IN-6), and <strong style="color:var(--gop);">THE GOALPOST</strong> (documented talking points). The archive labels analysis as analysis. You can verify every claim against the cited sources.</p>
       <p style="font-size:.82rem;color:var(--txt2);line-height:1.6;margin-top:.5rem;"><strong>Scope:</strong> This review covers Rep. Shreve&rsquo;s official House website, press releases, public social-media posts, local and national news coverage, FEC filings, congressional records, and voting data from 2013&ndash;present. &ldquo;No public record found&rdquo; means no instance was identified within this source set &mdash; not a claim of absolute non-existence.</p>
-      <p style="font-size:.78rem;color:var(--dim);margin-top:.5rem;"><span id="statEntries">116</span> entries &middot; <span id="statSources">193</span> sources &middot; <span id="statTopics">189</span> topics &middot; Coverage: 2013&ndash;present &middot; Updated: 5/3/2026 @ 07:30 AM EST</p>
+      <p style="font-size:.78rem;color:var(--dim);margin-top:.5rem;"><span id="statEntries">116</span> entries &middot; <span id="statSources">193</span> sources &middot; <span id="statTopics">189</span> topics &middot; Coverage: 2013&ndash;present &middot; Updated: 5/9/2026 @ 6:13 PM EST</p>
     </div>
   </details>
 
@@ -555,9 +535,10 @@ body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-se
 
   <!-- CANDIDATE PROFILES -->
     <!-- 6-CANDIDATE PROFILES -->
-  <h3 style="font-size:1rem;font-weight:700;color:var(--gop);margin:2rem 0 .8rem;">Republican Primary &mdash; May 5</h3>
+    <h3 style="font-size:1rem;font-weight:700;color:var(--dem3);margin:2rem 0 .8rem;">November 3, 2026 General Election</h3>
+  <p style="font-size:.82rem;color:var(--dim);margin-bottom:1rem;">Wirth (D) vs. Shreve (R). The May 5 primary is over. The four other primary candidates are documented in the <a href="javascript:void(0);" onclick="showPanel('primary-candidates');" style="color:var(--dem);font-weight:700;text-decoration:underline;">Primary Candidates</a> tab for the historical record.</p>
   <div class="candidate-profiles">
-    <div class="cand-card shreve">
+<div class="cand-card shreve">
       <h4>Jefferson Shreve</h4>
       <div class="cand-party">Republican &middot; Incumbent</div>
       <div class="cand-detail"><strong>Background:</strong> Former CEO of Storage Express (sold for $590M). Appointed to Indianapolis City Council twice &mdash; never elected to either seat. Lost State Senate primary (2016). Lost mayoral race by 19 points (2023). Won IN-6 in deep-red district (2024). Age 60.</div>
@@ -567,29 +548,7 @@ body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-se
       <div class="cand-detail"><strong>Endorsements:</strong> Trump, NRA, Indiana Farm Bureau.</div>
       <div class="cand-highlight">490+ votes &middot; 0 breaks from party line &middot; Heritage Action: 0%</div>
     </div>
-    <div class="cand-card" style="border-color:var(--gold);background:rgba(249,168,37,.03);">
-      <h4 style="color:#E65100;">Sarah Janisse Brown</h4>
-      <div class="cand-party" style="color:var(--gold);">Republican &middot; Challenger</div>
-      <div class="cand-detail"><strong>Background:</strong> Mother of 15 (several adopted from Ukraine), grandmother of 5. Greenwood resident. Founded Thinking Tree Books (360+ books, $1.5M+ business). Dyslexia Games therapy program (10,000+ children served). Former Fortville Town Council member.</div>
-      <div class="cand-detail"><strong>Campaign Funding:</strong> $18,390 raised. Grassroots challenger. Shreve has 170x more cash.</div>
-      <div class="cand-detail"><strong>Platform:</strong> School choice, parental rights, MAHA ("Make America Healthy Again") food policy, pro-life, "unwavering" 2A. Challenges Shreve for flip-flopping on guns.</div>
-      <div class="cand-detail"><strong>Why She's Running:</strong> Calls Shreve's NRA F-rating and position shifts proof he follows "lobbyist agendas" over convictions.</div>
-      <div class="cand-highlight" style="background:var(--goldL);color:#E65100;">Grassroots conservative &middot; Challenging from the right</div>
-    </div>
-  </div>
-
-  <h3 style="font-size:1rem;font-weight:700;color:var(--dem);margin:2rem 0 .8rem;">Democratic Primary &mdash; May 5</h3>
-  <div class="candidate-profiles">
-    <div class="cand-card amyx">
-      <h4>Kory Amyx</h4>
-      <div class="cand-party">Democrat &middot; Progressive</div>
-      <div class="cand-detail"><strong>Background:</strong> Raised in Connersville (father: firefighter, mother: beautician). B.S. Ball State. 20+ years in higher education/financial aid. McCordsville resident. First openly gay candidate for IN-6.</div>
-      <div class="cand-detail"><strong>Campaign Style:</strong> 23,000+ doors knocked personally. Grassroots funded. Zero self-funding. Plans 3+ public town halls.</div>
-      <div class="cand-detail"><strong>Key Positions:</strong> Medicare for All (phased), $20-25 min wage, eliminate federal income tax under $75K, Unity Pathway Act (replace ICE), legalize cannabis, end school vouchers, data center moratorium.</div>
-      <div class="cand-detail"><strong>Likely Caucus:</strong> Congressional Progressive Caucus.</div>
-      <div class="cand-highlight">23,000+ doors knocked &middot; Progressive populist</div>
-    </div>
-    <div class="cand-card wirth">
+<div class="cand-card wirth">
       <h4>Cinde Wirth</h4>
       <div class="cand-party">Democrat &middot; Progressive</div>
       <div class="cand-detail"><strong>Background:</strong> 7th-generation Bartholomew County. Ph.D. Cultural &amp; Educational Policy (Ball State, 2025). Albert Einstein Distinguished Educator Fellow (1 of 14 nationally). Wrote federal education legislation that became law (2020). 10+ years teaching biology/environmental science. NOAA-certified coral reef specialist.</div>
@@ -598,25 +557,7 @@ body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-se
       <div class="cand-detail"><strong>Likely Caucus:</strong> Congressional Progressive Caucus.</div>
       <div class="cand-highlight">Einstein Fellow &middot; Wrote federal law &middot; Strongest progressive credentials</div>
     </div>
-    <div class="cand-card" style="border-color:#3F51B5;background:rgba(63,81,181,.03);">
-      <h4 style="color:#283593;">Nick Baker</h4>
-      <div class="cand-party" style="color:#3F51B5;">Democrat &middot; Moderate</div>
-      <div class="cand-detail"><strong>Background:</strong> Age 46. Lifelong Indiana resident. IU undergrad, McKinney School of Law (2006). Personal injury attorney (Nick Baker Law LLC). Super Lawyers Rising Star (2013-2019). Father of two, building home on farmland in Camby.</div>
-      <div class="cand-detail"><strong>Campaign Style:</strong> Positioned as "most electable" in R+16 district. "Small government Democrat." Invokes Lee Hamilton, Dick Lugar, Birch Bayh as models. Participated in April 23 debate.</div>
-      <div class="cand-detail"><strong>Key Positions:</strong> Public option ("Medicare for More") NOT single-payer, $25 min wage, reform ICE (not abolish), balanced budget, Clean Air/Water Act protections, remove KKK laws from Indiana books.</div>
-      <div class="cand-detail"><strong>Likely Caucus:</strong> New Democrat Coalition or Blue Dog.</div>
-      <div class="cand-detail"><strong>Notable:</strong> Only Dem opposing ICE abolition. Only Dem supporting public option over single-payer. Camp Lejeune veterans' rights work.</div>
-      <div class="cand-highlight" style="background:#E8EAF6;color:#283593;">Pragmatist &middot; "Small government Democrat" &middot; Electability argument</div>
-    </div>
-    <div class="cand-card" style="border-color:#009688;background:rgba(0,150,136,.03);">
-      <h4 style="color:#00695C;">David Boyd</h4>
-      <div class="cand-party" style="color:#009688;">Democrat &middot; Moderate/Undefined</div>
-      <div class="cand-detail"><strong>Background:</strong> Age 41. Franklin Township, Indianapolis. Former TSA Officer (DHS counterterrorism). Brief U.S. Navy service. Census Bureau field rep. IUPUI Political Science studies. Current insurance adjuster (disaster response).</div>
-      <div class="cand-detail"><strong>Campaign Funding:</strong> $3,340 self-contributed + $500 ActBlue donor. Spent $2K on voter database, $998 yard signs, $349 Facebook ads. Lowest-funded candidate.</div>
-      <div class="cand-detail"><strong>Key Positions:</strong> $25 min wage, bipartisanship focus, restore ACA subsidies, expand rental assistance, short-term food price controls, protect Social Security/Medicare/Medicaid. 10 priorities listed, few specifics.</div>
-      <div class="cand-detail"><strong>Notable:</strong> Withdrew from April 23 debate (scheduling conflict). Minimal public campaign presence.</div>
-      <div class="cand-highlight" style="background:#E0F2F1;color:#00695C;">Federal service background &middot; Bipartisan messaging &middot; Lowest profile</div>
-    </div>
+  </div>
   </div>
 
   <!-- DEMOCRATIC FACTION COMPARISON -->
@@ -916,6 +857,77 @@ body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-se
 </div>
 
 <!-- IN-6 DISTRICT DATA PANEL -->
+
+<div class="panel" id="panel-primary-candidates">
+  <div style="margin-bottom:1.5rem;">
+    <h2 style="font-size:1.3rem;font-weight:700;color:var(--dem3);">Primary Candidates &mdash; May 5, 2026</h2>
+    <p style="font-size:.85rem;color:var(--dim);margin-top:.3rem;">Historical record of all candidates who ran in the May 5 IN-6 primary. The two who advanced &mdash; <strong>Cinde Wirth (D)</strong> and <strong>Jefferson Shreve (R)</strong> &mdash; are documented in the <a href="javascript:void(0);" onclick="showPanel('compare');" style="color:var(--dem);font-weight:700;">Wirth vs. Shreve</a> tab.</p>
+  </div>
+
+  <div style="background:#f8f9fa;border:1px solid #dee2e6;border-radius:8px;padding:1rem 1.2rem;margin-bottom:1.5rem;font-size:.85rem;line-height:1.65;color:#444;">
+    <strong style="color:#333;">Why this tab exists:</strong> Candidates come and go. The district record stays. These four people put themselves on the ballot, ran public campaigns, and asked IN-6 to consider them. Their platforms and platforms are preserved here so the record reflects the full field voters chose from &mdash; not just the two who won. None of the platforms below were endorsed by this archive. They are documented as a matter of public record.
+  </div>
+
+  <h3 style="font-size:1rem;font-weight:700;color:var(--gop);margin:1.5rem 0 .8rem;">Republican Primary Challenger (lost)</h3>
+  <div class="candidate-profiles">
+<div class="cand-card" style="border-color:var(--gold);background:rgba(249,168,37,.03);">
+      <h4 style="color:#E65100;">Sarah Janisse Brown</h4>
+      <div class="cand-party" style="color:var(--gold);">Republican &middot; Challenger</div>
+      <div class="cand-detail"><strong>Background:</strong> Mother of 15 (several adopted from Ukraine), grandmother of 5. Greenwood resident. Founded Thinking Tree Books (360+ books, $1.5M+ business). Dyslexia Games therapy program (10,000+ children served). Former Fortville Town Council member.</div>
+      <div class="cand-detail"><strong>Campaign Funding:</strong> $18,390 raised. Grassroots challenger. Shreve has 170x more cash.</div>
+      <div class="cand-detail"><strong>Platform:</strong> School choice, parental rights, MAHA ("Make America Healthy Again") food policy, pro-life, "unwavering" 2A. Challenges Shreve for flip-flopping on guns.</div>
+      <div class="cand-detail"><strong>Why She's Running:</strong> Calls Shreve's NRA F-rating and position shifts proof he follows "lobbyist agendas" over convictions.</div>
+      <div class="cand-highlight" style="background:var(--goldL);color:#E65100;">Grassroots conservative &middot; Challenging from the right</div>
+    </div>
+  </div>
+
+  <h3 style="font-size:1rem;font-weight:700;color:var(--dem);margin:2rem 0 .8rem;">Democratic Primary &mdash; Wirth (winner) and Other Candidates</h3>
+  <p style="font-size:.78rem;color:var(--dim);margin-bottom:1rem;">Wirth advanced and is documented in the <a href="javascript:void(0);" onclick="showPanel('compare');" style="color:var(--dem);font-weight:700;">Wirth vs. Shreve</a> tab. Amyx, Baker, and Boyd ran but did not advance. All three are preserved here.</p>
+<div class="candidate-profiles">
+    <div class="cand-card amyx">
+      <h4>Kory Amyx</h4>
+      <div class="cand-party">Democrat &middot; Progressive</div>
+      <div class="cand-detail"><strong>Background:</strong> Raised in Connersville (father: firefighter, mother: beautician). B.S. Ball State. 20+ years in higher education/financial aid. McCordsville resident. First openly gay candidate for IN-6.</div>
+      <div class="cand-detail"><strong>Campaign Style:</strong> 23,000+ doors knocked personally. Grassroots funded. Zero self-funding. Plans 3+ public town halls.</div>
+      <div class="cand-detail"><strong>Key Positions:</strong> Medicare for All (phased), $20-25 min wage, eliminate federal income tax under $75K, Unity Pathway Act (replace ICE), legalize cannabis, end school vouchers, data center moratorium.</div>
+      <div class="cand-detail"><strong>Likely Caucus:</strong> Congressional Progressive Caucus.</div>
+      <div class="cand-highlight">23,000+ doors knocked &middot; Progressive populist</div>
+    </div>
+    <div class="cand-card wirth">
+      <h4>Cinde Wirth</h4>
+      <div class="cand-party">Democrat &middot; Progressive</div>
+      <div class="cand-detail"><strong>Background:</strong> 7th-generation Bartholomew County. Ph.D. Cultural &amp; Educational Policy (Ball State, 2025). Albert Einstein Distinguished Educator Fellow (1 of 14 nationally). Wrote federal education legislation that became law (2020). 10+ years teaching biology/environmental science. NOAA-certified coral reef specialist.</div>
+      <div class="cand-detail"><strong>Campaign Style:</strong> Three-time candidate (2020 state senate, 2024, 2026). 2024 nominee: lost general ~30% to Shreve ~66% (raised $7,269). AFT/AFL-CIO union member. Moms Demand Action volunteer.</div>
+      <div class="cand-detail"><strong>Key Positions:</strong> Medicare for All, abolish ICE entirely, 2-3% billionaire tax, fully fund public schools, end vouchers, reproductive rights, affordable housing, clean air/water.</div>
+      <div class="cand-detail"><strong>Likely Caucus:</strong> Congressional Progressive Caucus.</div>
+      <div class="cand-highlight">Einstein Fellow &middot; Wrote federal law &middot; Strongest progressive credentials</div>
+    </div>
+    <div class="cand-card" style="border-color:#3F51B5;background:rgba(63,81,181,.03);">
+      <h4 style="color:#283593;">Nick Baker</h4>
+      <div class="cand-party" style="color:#3F51B5;">Democrat &middot; Moderate</div>
+      <div class="cand-detail"><strong>Background:</strong> Age 46. Lifelong Indiana resident. IU undergrad, McKinney School of Law (2006). Personal injury attorney (Nick Baker Law LLC). Super Lawyers Rising Star (2013-2019). Father of two, building home on farmland in Camby.</div>
+      <div class="cand-detail"><strong>Campaign Style:</strong> Positioned as "most electable" in R+16 district. "Small government Democrat." Invokes Lee Hamilton, Dick Lugar, Birch Bayh as models. Participated in April 23 debate.</div>
+      <div class="cand-detail"><strong>Key Positions:</strong> Public option ("Medicare for More") NOT single-payer, $25 min wage, reform ICE (not abolish), balanced budget, Clean Air/Water Act protections, remove KKK laws from Indiana books.</div>
+      <div class="cand-detail"><strong>Likely Caucus:</strong> New Democrat Coalition or Blue Dog.</div>
+      <div class="cand-detail"><strong>Notable:</strong> Only Dem opposing ICE abolition. Only Dem supporting public option over single-payer. Camp Lejeune veterans' rights work.</div>
+      <div class="cand-highlight" style="background:#E8EAF6;color:#283593;">Pragmatist &middot; "Small government Democrat" &middot; Electability argument</div>
+    </div>
+    <div class="cand-card" style="border-color:#009688;background:rgba(0,150,136,.03);">
+      <h4 style="color:#00695C;">David Boyd</h4>
+      <div class="cand-party" style="color:#009688;">Democrat &middot; Moderate/Undefined</div>
+      <div class="cand-detail"><strong>Background:</strong> Age 41. Franklin Township, Indianapolis. Former TSA Officer (DHS counterterrorism). Brief U.S. Navy service. Census Bureau field rep. IUPUI Political Science studies. Current insurance adjuster (disaster response).</div>
+      <div class="cand-detail"><strong>Campaign Funding:</strong> $3,340 self-contributed + $500 ActBlue donor. Spent $2K on voter database, $998 yard signs, $349 Facebook ads. Lowest-funded candidate.</div>
+      <div class="cand-detail"><strong>Key Positions:</strong> $25 min wage, bipartisanship focus, restore ACA subsidies, expand rental assistance, short-term food price controls, protect Social Security/Medicare/Medicaid. 10 priorities listed, few specifics.</div>
+      <div class="cand-detail"><strong>Notable:</strong> Withdrew from April 23 debate (scheduling conflict). Minimal public campaign presence.</div>
+      <div class="cand-highlight" style="background:#E0F2F1;color:#00695C;">Federal service background &middot; Bipartisan messaging &middot; Lowest profile</div>
+    </div>
+
+  <div style="margin-top:2rem;background:#fff8e1;border:2px solid #f9a825;border-radius:10px;padding:1.2rem;">
+    <h4 style="font-size:.7rem;font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.12em;color:#5a4500;font-weight:800;margin:0 0 .6rem;">A Note On The Primary</h4>
+    <p style="font-size:.85rem;color:#5a4500;line-height:1.65;margin:0;">In a heavily Republican district (Cook PVI R+16), primaries often determine the winner. The May 5 result reflected: (1) Shreve's incumbency advantage and money, narrowly held against an unfunded grassroots challenger (53&ndash;47); (2) a Democratic field where progressive credentials, moderation, and grassroots energy split four ways before consolidating around the eventual nominee. Whatever you think of the outcome, every name on this page chose to run. That itself is the precondition for accountability.</p>
+  </div>
+</div>
+
 <div class="panel" id="panel-district">
   <div style="margin-bottom:1.5rem;">
     <h2 style="font-size:1.3rem;font-weight:700;color:var(--dem3);">IN-6 by the Numbers</h2>
@@ -1365,7 +1377,7 @@ body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-se
     <p style="font-size:.8rem;color:var(--dim);margin-top:.3rem;">Follow the project: <a href="https://facebook.com/plinst" target="_blank" rel="noopener">facebook.com/plinst</a> &middot; <a href="https://github.com/PauseBeforeHarmProtocol/pbhp" target="_blank" rel="noopener">github.com/PauseBeforeHarmProtocol/pbhp</a></p>
   </div>
   <div class="about-section">
-    <p style="font-size:.8rem;color:var(--dim);font-style:italic;">Coverage from 2013 to present &middot; Last updated: 5/3/2026 &middot; 116 documented entries &middot; 194 sources &middot; 189 topics &middot; 12 comparison areas</p>
+    <p style="font-size:.8rem;color:var(--dim);font-style:italic;">Coverage from 2013 to present &middot; Last updated: 5/9/2026 &middot; 116 documented entries &middot; 194 sources &middot; 189 topics &middot; 12 comparison areas</p>
   </div>
 </div>
 
@@ -1373,7 +1385,7 @@ body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-se
 <div class="footer">
   <p>THE RECORD &mdash; IN-6 &middot; A representation audit of Rep. Jefferson Shreve</p>
   <p>Every claim sourced. Every position documented. Every flip tracked.</p>
-  <p style="margin-top:.5rem;">Coverage from 2013 to present &middot; Last updated: 5/3/2026 @ 07:30 AM EST</p>
+  <p style="margin-top:.5rem;">Coverage from 2013 to present &middot; Last updated: 5/9/2026 @ 6:13 PM EST</p>
   <div class="pbhp-footer">
     <p style="font-size:.65rem;color:var(--dim);">Built with <a href="https://github.com/PauseBeforeHarmProtocol/pbhp" target="_blank" rel="noopener">Pause Before Harm Protocol</a> &middot; Accountability through transparency</p>
     <p style="font-size:.6rem;color:var(--dim);margin-top:.3rem;">
@@ -1420,11 +1432,11 @@ body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-se
   if(se2) se2.textContent = ENTRIES.length;
 
   // Countdown
-  const primary = new Date('2026-05-05T00:00:00');
+  const primary = new Date('2026-11-03T00:00:00');
   const now = new Date();
   const diff = Math.ceil((primary - now) / (1000*60*60*24));
   const cdEl = document.getElementById('countdown');
-  if(cdEl) cdEl.textContent = diff > 0 ? diff + ' days until primary' : 'PRIMARY DAY';
+  if(cdEl) cdEl.textContent = diff > 0 ? diff + ' days until Election Day' : 'ELECTION DAY';
 
   // State
   let activeTags = new Set();
