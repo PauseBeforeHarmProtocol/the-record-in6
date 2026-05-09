@@ -343,6 +343,120 @@ body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-se
 <!-- HOME PANEL -->
 <div class="panel show" id="panel-home">
 
+<!-- WIRTH VS SHREVE LANDING FOCUS -->
+<div style="margin:1rem 1.2rem 2.5rem;background:linear-gradient(135deg,#0d1b2a 0%,#1a2a4a 50%,#2a1a3a 100%);border-radius:14px;padding:2.5rem 2rem;color:#fff;box-shadow:0 8px 32px rgba(0,0,0,.25);text-align:center;">
+  <div style="font-family:'JetBrains Mono',monospace;font-size:.65rem;text-transform:uppercase;letter-spacing:.2em;color:rgba(255,255,255,.6);margin-bottom:.5rem;">November 3, 2026 General Election &middot; Indiana 6th</div>
+  <h2 style="font-size:3.2rem;font-weight:900;line-height:1;margin:0 0 .5rem;letter-spacing:-.02em;"><span style="background:linear-gradient(135deg,#a78bfa,#7c3aed);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Wirth</span> <span style="color:rgba(255,255,255,.4);font-size:2rem;font-weight:600;">vs.</span> <span style="background:linear-gradient(135deg,#fca5a5,#dc2626);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Shreve</span></h2>
+  <div id="vsCountdown" style="font-family:'JetBrains Mono',monospace;font-size:.85rem;color:#fbbf24;letter-spacing:.08em;margin-bottom:1.8rem;">Loading countdown...</div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;text-align:left;max-width:820px;margin:0 auto;">
+    <div style="background:rgba(220,38,38,.12);border:1px solid rgba(220,38,38,.4);border-radius:10px;padding:1.2rem;">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:.55rem;text-transform:uppercase;letter-spacing:.15em;color:#fca5a5;font-weight:800;margin-bottom:.3rem;">Republican &middot; Incumbent</div>
+      <div style="font-size:1.3rem;font-weight:900;color:#fff;margin-bottom:.4rem;">Jefferson Shreve</div>
+      <ul style="margin:0;padding-left:1.1rem;font-size:.78rem;line-height:1.6;color:rgba(255,255,255,.85);">
+        <li>Won R primary 53&ndash;47 (close for an incumbent)</li>
+        <li>Net worth ~$600M &middot; self-funds 95%</li>
+        <li>House Appropriations Committee (April 2026)</li>
+        <li><strong style="color:#fff;">558+ stock trades</strong>, ~$244.8M volume since taking office</li>
+        <li>$2.2M estimated stock gains in <strong>January 2026 alone</strong></li>
+        <li>Q1 2026 fundraising: $49.7K (1.5% from individuals)</li>
+        <li><strong style="color:#fff;">Zero public town halls</strong> in 119th Congress</li>
+        <li>0 breaks from party line in 490+ votes</li>
+      </ul>
+    </div>
+    <div style="background:rgba(124,58,237,.12);border:1px solid rgba(124,58,237,.4);border-radius:10px;padding:1.2rem;">
+      <div style="font-family:'JetBrains Mono',monospace;font-size:.55rem;text-transform:uppercase;letter-spacing:.15em;color:#a78bfa;font-weight:800;margin-bottom:.3rem;">Democrat &middot; Nominee</div>
+      <div style="font-size:1.3rem;font-weight:900;color:#fff;margin-bottom:.4rem;">Cinde Wirth</div>
+      <ul style="margin:0;padding-left:1.1rem;font-size:.78rem;line-height:1.6;color:rgba(255,255,255,.85);">
+        <li>Won 4-way D primary with 58.78%</li>
+        <li>7th-generation Bartholomew County resident</li>
+        <li>Ph.D. Cultural &amp; Educational Policy (Ball State, 2025)</li>
+        <li>Albert Einstein Distinguished Educator Fellow (1 of 14 nationally)</li>
+        <li><strong style="color:#fff;">Wrote federal education law</strong> that became law (2020)</li>
+        <li>2024 nominee &mdash; lost to Shreve ~30/66</li>
+        <li>AFT/AFL-CIO union member &middot; Moms Demand Action</li>
+        <li>Plans 3+ public town halls per year</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap;margin-top:1.8rem;">
+    <button onclick="document.getElementById('vsTop20').scrollIntoView({behavior:'smooth'});" style="font-family:'JetBrains Mono',monospace;font-size:.65rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800;padding:.7rem 1.4rem;border:none;background:#fff;color:#0d1b2a;border-radius:6px;cursor:pointer;">Top 20 Positions &darr;</button>
+    <button onclick="document.getElementById('vsBattle').scrollIntoView({behavior:'smooth'});" style="font-family:'JetBrains Mono',monospace;font-size:.65rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800;padding:.7rem 1.4rem;border:2px solid rgba(255,255,255,.3);background:transparent;color:#fff;border-radius:6px;cursor:pointer;">The Battle Ahead &darr;</button>
+  </div>
+</div>
+
+<!-- TOP 20 POSITIONS COMPARISON -->
+<div id="vsTop20" style="margin:2rem 1.2rem;max-width:1000px;margin-left:auto;margin-right:auto;">
+  <h2 style="font-size:1.6rem;font-weight:900;color:var(--dem3);text-align:center;margin-bottom:.3rem;">Top 20 Positions: Where They Stand</h2>
+  <p style="font-size:.85rem;color:var(--dim);text-align:center;margin-bottom:1.5rem;line-height:1.6;">Pulled from current campaign sites, public statements, and voting records (House Clerk, ProPublica, FEC, Capitol Trades). All entries cite primary sources in the <a onclick="showPanel('timeline');" style="color:var(--dem);font-weight:700;text-decoration:underline;cursor:pointer;">Full Timeline</a>.</p>
+
+  <table style="width:100%;border-collapse:collapse;font-size:.82rem;line-height:1.55;background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+    <thead>
+      <tr style="background:#0d1b2a;color:#fff;">
+        <th style="padding:.7rem .8rem;text-align:left;width:18%;font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;">Topic</th>
+        <th style="padding:.7rem .8rem;text-align:left;width:41%;background:rgba(220,38,38,.85);font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;">Shreve (R)</th>
+        <th style="padding:.7rem .8rem;text-align:left;width:41%;background:rgba(124,58,237,.85);font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;">Wirth (D)</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;font-weight:700;background:#f8f9fa;">1. Healthcare</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">Voted for One Big Beautiful Bill: $1.2T Medicaid/SNAP cuts. ACA "never delivered." 11.8M projected newly uninsured.</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;"><strong>Medicare for All</strong>. Families save ~$24K/yr. Reproductive rights: doctors and patients decide.</td></tr>
+
+      <tr><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;font-weight:700;background:#f8f9fa;">2. Tariffs &amp; Manufacturing</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">Told manufacturers to "be patient." Says tariffs have "more wins than losses." No public dissent on Trump trade policy.</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">Targeted/strategic tariffs only. Working families pay the price of blanket tariffs &mdash; gas prices, jobs, hospitals.</td></tr>
+
+      <tr><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;font-weight:700;background:#f8f9fa;">3. Gun Policy</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">4 distinct positions in 10 years. Currently NRA-endorsed. "Unwavering" 2A. As Indy mayoral candidate, supported gun restrictions.</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">Moms Demand Action volunteer. Universal background checks. Assault weapons ban. Gun violence prevention.</td></tr>
+
+      <tr><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;font-weight:700;background:#f8f9fa;">4. Public Education</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">Supports vouchers. Voted to fold Department of Education functions into other agencies.</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;"><strong>Fully fund public schools.</strong> End vouchers. 10+ years teaching biology/environmental science.</td></tr>
+
+      <tr><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;font-weight:700;background:#f8f9fa;">5. Reproductive Rights</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">Pro-life. Supports federal restrictions. No public defense of contraception/IVF access.</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">"Doctors and patients make decisions." Codify Roe federally. Protect contraception &amp; IVF.</td></tr>
+
+      <tr><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;font-weight:700;background:#f8f9fa;">6. Climate &amp; Environment</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">Co-sponsored Protecting Domestic Mining Act. Supports fossil-fuel expansion. Voted to roll back EPA standards.</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">NOAA-certified coral reef specialist. Clean air/water priorities. Oppose fossil-fuel subsidies.</td></tr>
+
+      <tr><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;font-weight:700;background:#f8f9fa;">7. Immigration</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">Strict enforcement. Supports mass deportation. Voted for $70B immigration enforcement bill (which also held $1B for Trump ballroom security).</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;"><strong>Abolish ICE entirely.</strong> Path to citizenship. Comprehensive reform.</td></tr>
+
+      <tr><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;font-weight:700;background:#f8f9fa;">8. Iran War</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">No public dissent on Trump's Iran posture. Voted with party on Mar 5 &amp; Apr 16 War Powers resolutions blocking restraint.</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">Supports congressional reassertion of war powers. Critical of unilateral executive war authority.</td></tr>
+
+      <tr><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;font-weight:700;background:#f8f9fa;">9. Tax Policy</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">Voted for OBBB (extension of 2017 Trump tax cuts, paid for via Medicaid/SNAP cuts).</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;"><strong>2-3% billionaire tax.</strong> Restore higher corporate rates. Tax reform funds healthcare/education.</td></tr>
+
+      <tr><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;font-weight:700;background:#f8f9fa;">10. Stock Trading by Congress</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;"><strong>558+ trades since taking office</strong>, ~$244.8M tracked volume. $2.2M estimated stock gains in January 2026 alone. No support for STOCK Act reform.</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">Supports banning member stock trading. Endorses STOCK Act expansion to spouses.</td></tr>
+
+      <tr><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;font-weight:700;background:#f8f9fa;">11. Town Halls / Accessibility</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;"><strong>Zero public town halls</strong> in 119th Congress. Zero debates accepted (primary or general, 2024 or 2026). Mobile staff hours only.</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">Plans 3+ public town halls per year. Has agreed to public debate.</td></tr>
+
+      <tr><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;font-weight:700;background:#f8f9fa;">12. Campaign Finance</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">Net worth ~$600M. <strong>95% self-funded.</strong> 0.04% small-dollar in 2024. Q1 2026: $49.7K total &middot; 1.5% from individuals &middot; ranked 1,012th nationally.</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">Grassroots. 2024: $7,269 raised. Refuses corporate PAC money.</td></tr>
+
+      <tr><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;font-weight:700;background:#f8f9fa;">13. Labor &amp; Wages</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">No public minimum wage position. Voted against PRO Act. Heritage Action lifetime: 0%.</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">AFT/AFL-CIO union member. Support PRO Act. Living wage. Right to organize.</td></tr>
+
+      <tr><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;font-weight:700;background:#f8f9fa;">14. Cannabis</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">No known position favoring legalization or decriminalization.</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">Legalize medical, decriminalize possession. Science-based policy. Revenue for IN.</td></tr>
+
+      <tr><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;font-weight:700;background:#f8f9fa;">15. LGBTQ+ Rights</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">Voted with anti-trans GOP positions. No public support for LGBTQ+ workplace protections.</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">Support full LGBTQ+ rights. Pass Equality Act. Trans rights as civil rights.</td></tr>
+
+      <tr><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;font-weight:700;background:#f8f9fa;">16. Housing &amp; Affordability</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">No known affordable housing platform. Made fortune in self-storage real estate (Storage Express, sold $590M).</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">Affordable housing investment. Anti-speculation policy. Housing as a right.</td></tr>
+
+      <tr><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;font-weight:700;background:#f8f9fa;">17. Social Security &amp; Medicare</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">Voted for Medicare cuts in OBBB. No public defense of Social Security expansion.</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;"><strong>Expand and protect.</strong> No cuts. Lift Social Security cap on high earners.</td></tr>
+
+      <tr><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;font-weight:700;background:#f8f9fa;">18. Voting Rights</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">No public position against Trump's VRA-era redistricting. On Trump's IN redistricting target list (Dec 2025 IN Senate killed it; Trump-backed primaries May 5 ousted holdouts).</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">Restore Voting Rights Act. Federal voting rights protections. Independent redistricting commissions.</td></tr>
+
+      <tr><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;font-weight:700;background:#f8f9fa;">19. Tech &amp; Privacy</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">Vague positions. No public stance on data privacy laws or big-tech antitrust.</td><td style="padding:.6rem .8rem;border-bottom:1px solid #eee;">Stronger privacy protections. Antitrust against monopoly tech. Net neutrality.</td></tr>
+
+      <tr><td style="padding:.6rem .8rem;font-weight:700;background:#f8f9fa;">20. Trump Alignment</td><td style="padding:.6rem .8rem;"><strong>0 breaks from party line</strong> in 490+ votes. Heritage Action lifetime score: 0% (no defections).</td><td style="padding:.6rem .8rem;">Opposes Trump's executive overreach. Supports congressional reassertion of war powers and oversight.</td></tr>
+    </tbody>
+  </table>
+
+  <p style="font-size:.72rem;color:var(--dim);margin-top:.8rem;line-height:1.55;text-align:center;font-style:italic;">Position summaries draw from Shreve's voting record (Clerk of the House, ProPublica), public statements, and shreve.house.gov press releases; and Wirth's campaign site (wirth4congress.com), 2024 platform, and primary debate statements (April 23, 2026). If a position is uncertain or has shifted, we say so.</p>
+</div>
+
+<!-- THE BATTLE AHEAD -->
+<div id="vsBattle" style="margin:2.5rem 1.2rem;max-width:780px;margin-left:auto;margin-right:auto;background:linear-gradient(135deg,#fff8e1,#fffaf0);border:2px solid #f9a825;border-radius:12px;padding:1.8rem 2rem;box-shadow:0 4px 16px rgba(249,168,37,.12);">
+  <h2 style="font-size:1.5rem;font-weight:900;color:#0d1b2a;margin:0 0 .8rem;letter-spacing:-.01em;">The Battle Ahead</h2>
+  <p style="font-size:.92rem;line-height:1.75;color:#333;margin:0 0 1rem;">IN-6 is a Cook Political Report <strong>R+16</strong> district. By every conventional measure, that should mean it's not competitive. But conventional measures missed two things in 2026.</p>
+  <p style="font-size:.92rem;line-height:1.75;color:#333;margin:0 0 1rem;"><strong>First:</strong> Shreve barely held off a grassroots challenger he outspent roughly 170-to-1. Sarah Janisse Brown took 47% of the Republican primary with about $18,000 raised against Shreve's $600M net worth. That isn't a vote of confidence in the incumbent &mdash; it's a warning shot from his own base.</p>
+  <p style="font-size:.92rem;line-height:1.75;color:#333;margin:0 0 1rem;"><strong>Second:</strong> The same week Shreve survived 53&ndash;47, his Q1 2026 fundraising ranked 1,012th nationally. <strong>$49,700 total. 1.5% from individuals.</strong> An incumbent on House Appropriations should be raising six figures from corporate PACs alone. Something is wrong with the donor side of the operation &mdash; and it's not Wirth's fault.</p>
+  <p style="font-size:.92rem;line-height:1.75;color:#333;margin:0 0 1rem;">Wirth has run this race before. In 2024 she lost roughly 30&ndash;66 with $7,269 raised. The structural map hasn't changed. But the political environment around it has: tariffs at the pump (<strong>$4.81/gal in Indiana, $0.35 above national</strong>), Medicaid cuts taking effect at <strong>25% of Indiana's 52 rural hospitals</strong>, an estimated <strong>$1.1 billion in IN Medicaid funding cut over 10 years</strong> from the One Big Beautiful Bill Shreve voted for, and an incumbent who has voted with his party 100% of the time on issues that hurt his district.</p>
+  <p style="font-size:.92rem;line-height:1.75;color:#333;margin:0 0 1rem;">Wirth doesn't have to flip the district to win. <strong>She has to make Shreve defend it.</strong> He hasn't held a public town hall in two years. The general election is 177 days. Every day he runs out the clock without facing voters in person is a day his record speaks for itself &mdash; and the record now includes 558 stock trades, $2.2 million in personal stock gains in January 2026 alone, a vote to cut Medicaid for 11.8 million people, and zero public answers about any of it.</p>
+  <p style="font-size:.92rem;line-height:1.75;color:#333;margin:0 0 0;font-weight:600;">The question is not "will IN-6 turn blue." The question is: <em>when the incumbent will not show up, what does democratic accountability actually look like?</em> &mdash; and the answer to that question is being written, in public, between now and November 3.</p>
+</div>
+
+
   <!-- HERO: THE QUESTION -->
   <div style="text-align:center;padding:3rem 1rem 1.5rem;position:relative;">
     <div style="position:absolute;top:0;left:50%;transform:translateX(-50%);width:80%;max-width:500px;height:4px;background:var(--grad-main);border-radius:2px;"></div>
@@ -460,32 +574,6 @@ body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-se
   </div>
 
   <!-- QUICK COMPARISON (kept) -->
-  <div style="margin:1.5rem auto;max-width:720px;">
-    <h3 style="font-size:1.1rem;font-weight:900;color:var(--dem3);text-align:center;margin-bottom:.3rem;">November 3, 2026 &mdash; Wirth vs. Shreve</h3>
-    <p style="font-size:.82rem;color:var(--dim);text-align:center;margin-bottom:1rem;">The May 5 primary is over. Two candidates advance. <a href="javascript:void(0);" onclick="showPanel('primary-candidates');" style="color:var(--dem);text-decoration:underline;">Other primary candidates &raquo;</a></p>
-
-    <!-- Wirth vs Shreve General Election -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
-      <div style="border:2px solid var(--gop);border-radius:12px;padding:1.1rem;background:linear-gradient(135deg,rgba(198,40,40,.03),transparent);">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:.55rem;text-transform:uppercase;letter-spacing:.12em;color:var(--gop);font-weight:800;margin-bottom:.2rem;">Republican &middot; Incumbent</div>
-        <div style="font-weight:900;font-size:1.05rem;color:var(--gop3);">Jefferson Shreve</div>
-        <div style="font-size:.78rem;color:var(--dim);font-weight:600;margin-bottom:.5rem;">Won R primary 53&ndash;47</div>
-        <div style="font-size:.8rem;color:var(--txt2);line-height:1.5;">Net worth ~$600M. Self-funds 95%. House Appropriations Committee. Zero public town halls in 119th Congress. 4 gun positions in 10 years. Heritage Action lifetime: 0%.</div>
-      </div>
-      <div style="border:2px solid var(--purple);border-radius:12px;padding:1.1rem;background:linear-gradient(135deg,rgba(106,27,154,.03),transparent);">
-        <div style="font-family:'JetBrains Mono',monospace;font-size:.55rem;text-transform:uppercase;letter-spacing:.12em;color:var(--purple);font-weight:800;margin-bottom:.2rem;">Democrat &middot; Nominee</div>
-        <div style="font-weight:900;font-size:1.05rem;color:var(--purple);">Cinde Wirth</div>
-        <div style="font-size:.78rem;color:var(--dim);font-weight:600;margin-bottom:.5rem;">Won D primary &middot; 2024 nominee</div>
-        <div style="font-size:.8rem;color:var(--txt2);line-height:1.5;">7th-gen Bartholomew County. Ph.D. Education Policy. Albert Einstein Distinguished Educator Fellow. Wrote federal education law (2020). Medicare for All, fully fund public schools, end vouchers, reproductive rights, billionaire tax.</div>
-      </div>
-    </div>
-
-    <div style="background:#fff8e1;border:1px solid #f9a825;border-radius:8px;padding:.7rem 1rem;font-size:.78rem;line-height:1.5;color:#5a4500;">
-      <strong>The race:</strong> Cook Political Report rates IN-6 R+16. Shreve won 2024 by ~36 points. The general election in this district is decided by turnout, money, and whether the incumbent has to defend his record in public &mdash; or whether he can run out the clock without a single town hall or debate.
-    </div>
-
-  </div>
-
   <!-- CORRECTION POLICY / RIGHT OF RESPONSE -->
   <div style="margin:2rem auto;max-width:720px;border:1px solid var(--border);border-radius:10px;padding:1.2rem;">
     <h4 style="font-family:'JetBrains Mono',monospace;font-size:.6rem;text-transform:uppercase;letter-spacing:.12em;color:var(--dem);font-weight:800;margin:0 0 .6rem;">Correction Policy &amp; Right of Response</h4>
@@ -1439,6 +1527,8 @@ body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-se
   const diff = Math.ceil((primary - now) / (1000*60*60*24));
   const cdEl = document.getElementById('countdown');
   if(cdEl) cdEl.textContent = diff > 0 ? diff + ' days until Election Day' : 'ELECTION DAY';
+  const vsCdEl = document.getElementById('vsCountdown');
+  if(vsCdEl) vsCdEl.textContent = diff > 0 ? diff + ' DAYS UNTIL ELECTION DAY · NOVEMBER 3, 2026' : 'ELECTION DAY';
 
   // State
   let activeTags = new Set();
