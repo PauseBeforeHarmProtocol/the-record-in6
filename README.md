@@ -1,6 +1,21 @@
-# The Record — Indiana Sixth District
+<p align="center">
+  <img src="current/assets/brand/in6-hero.png" alt="An Indiana district evidence desk connecting votes, institutions, questions, and the preserved archive" width="100%">
+</p>
 
-A sourced accountability archive for Indiana's Sixth Congressional District.
+<p align="center"><sub>Editorial illustration · not a legal district-boundary map</sub></p>
+
+<h1 align="center">The Record — Indiana Sixth District</h1>
+
+<p align="center"><strong>Representation is a record: votes, authority, requests, answers, and unanswered questions.</strong></p>
+
+<p align="center">
+  <a href="current/in6/index.html">Open the current audit</a> ·
+  <a href="current/sources/index.html">Source ledger</a> ·
+  <a href="current/downloads/index.html">Downloads</a> ·
+  <a href="current/archive/index.html">Historical route</a>
+</p>
+
+A source-bound accountability archive for Indiana's Sixth Congressional District, with a dated current layer and a working route back to the preserved district archive.
 
 ## Current release
 
@@ -8,12 +23,12 @@ The current layer is checked through **July 18, 2026** and lives at [`current/in
 
 The legacy single-file archive remains preserved under `archive/` when this overlay is applied. The current layer does not claim to independently revalidate every historical entry.
 
-## Apply the overlay
+## Evidence boundary
 
-Run:
+The current layer separates verified facts, significance, stated responses, and open questions. It does not imply that every legacy entry was re-audited on July 18, and its structural validation is not an independent factual review.
+
+## Validate
 
 ```bash
-bash apply_overlay.sh /path/to/cloned/the-record-in6
+python scripts/validate.py
 ```
-
-The script backs up the existing root `index.html`, installs the current site, and then validates the result.

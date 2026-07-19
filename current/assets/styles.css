@@ -59,6 +59,13 @@ h1 { font-size: clamp(2.7rem, 6vw, 5.8rem); line-height: .98; margin: .5rem 0 1.
 .page-head { padding: 4rem 0 2rem; border-bottom: 1px solid var(--line); margin-bottom: 2rem; }
 .page-head h1 { color: var(--night); font-size: clamp(2.5rem, 5vw, 4.6rem); margin: .5rem 0 1rem; }
 .page-head p { max-width: 850px; color: var(--ink-2); font-size: 1.08rem; }
+.route-in6 .page-head { position: relative; overflow: hidden; padding: clamp(2.4rem, 6vw, 5rem); border: 1px solid #405069; border-radius: var(--radius); background: linear-gradient(90deg, rgba(11,19,32,.98) 0%, rgba(11,19,32,.88) 48%, rgba(11,19,32,.34) 100%), url("brand/in6-hero.png") center / cover; box-shadow: 0 24px 60px rgba(11,19,32,.22); }
+.route-in6 .page-head h1 { color: #fff; max-width: 850px; }
+.route-in6 .page-head p { color: #d4dce6; max-width: 760px; }
+.route-in6 .page-head .eyebrow { color: #e7c989; }
+.route-in6 .page-head .button--ghost { border-color: #aab4c1; color: #fff; }
+.route-in6 .page-head .button--ghost:hover { background: #26364a; color: #fff; }
+.route-in6 .page-head::after { content: "Editorial artwork · not a boundary map"; position: absolute; right: 1rem; bottom: .75rem; color: #c7d0dc; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .62rem; letter-spacing: .06em; text-transform: uppercase; }
 .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-top: -2rem; position: relative; }
 .stat { background: var(--paper-2); border: 1px solid var(--line); border-top: 4px solid var(--red); border-radius: 14px; padding: 1.15rem; box-shadow: var(--shadow); }
 .stat strong { display: block; font-size: 2rem; line-height: 1; }
